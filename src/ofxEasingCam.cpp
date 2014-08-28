@@ -86,7 +86,7 @@ void ofxEasingCam::setWindowSize(float width, float height)
 
 void ofxEasingCam::setCamSpeed(float camSpeed)
 {
-    camSpeed = ofClamp(mCamSpeed, 0, 1);
+    mCamSpeed = ofClamp(camSpeed, 0, 1);
 }
 
 void ofxEasingCam::setRandomPos(float randomAngle)
