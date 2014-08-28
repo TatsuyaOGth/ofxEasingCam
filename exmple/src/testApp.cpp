@@ -15,6 +15,7 @@ void testApp::setup()
     ofBackground(0, 0, 0);
     
     mCam.setup();
+    mCam.setCamSpeed(0.1); // set camera speed (0 - 1)
 }
 
 
@@ -26,7 +27,19 @@ void testApp::update()
 void testApp::draw()
 {
     mCam.begin();
-    
+ 
+    // sample drawing
+    ofSetColor(255);
+    ofFill();
+    const int size = 5;
+    const int exp = 75;
+    for (int i = -size; i < size; i++) {
+        for (int j = -size; j < size; j++) {
+            for (int k = -size; k < size; k++) {
+                ofRect(i * exp, j * exp, k * exp, 2, 2);
+            }
+        }
+    }
     ofDrawAxis(60);
     
     mCam.end();
@@ -35,4 +48,9 @@ void testApp::draw()
 void testApp::keyPressed(int key)
 {
     mCam.setRandomPos();
+}
+
+void testApp::mouseDragged(int x, int y, int button)
+{
+    mCam.setPos(x, y, mCam.getPos().z);
 }
