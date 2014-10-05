@@ -47,6 +47,8 @@ public:
     void setRandomPos(float randomAngle = 180);
     void setPos(float x, float y, float z);
     void setPos(ofVec3f & pos);
+    void setCurrentPos(float x, float y, float z);
+    void setCurrentPos(ofVec3f & pos);
     void setRandomScale(float min, float max);
     void setScale(float dist);
     

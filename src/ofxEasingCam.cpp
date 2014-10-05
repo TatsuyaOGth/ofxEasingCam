@@ -108,7 +108,17 @@ void ofxEasingCam::setPos(float x,float y,float z)
 
 void ofxEasingCam::setPos(ofVec3f & pos)
 {
-    mPosT.set(pos.x, pos.y, pos.z);
+    mPosN.set(pos.x, pos.y, pos.z);
+}
+
+void ofxEasingCam::setCurrentPos(float x,float y,float z)
+{
+    mPosT.set(x, y, z);
+}
+
+void ofxEasingCam::setCurrentPos(ofVec3f & pos)
+{
+    mPosN.set(pos.x, pos.y, pos.z);
 }
 
 void ofxEasingCam::setRandomScale(float min,float max)
