@@ -52,8 +52,9 @@ public:
     void setRandomScale(float min, float max);
     void setScale(float dist);
     
-    ofVec3f getPos(){ return mPosN; }
-    ofVec3f getTargetPos(){ return mPosT; }
+    ofVec3f  getPos(){ return mPosN; }
+    ofVec3f  getTargetPos(){ return mPosT; }
+    ofVec3f& getTargetPosRef(){ return mPosT; }
     float getScale(){ return mScaleN; }
 
 private:
